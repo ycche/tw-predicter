@@ -59,3 +59,18 @@ Best accuracy SVC/0.56
 
 Trial 7:
 This time I tried using hyperparameter tuning with the 2 best classifiers XGB/SVC using GridSearchCV. The best results came out to 0.59 using SVC
+
+# Conclusions
+
+While creating the project, I knew that there were many errors and problems with the approach that I took. I will briefly explain some of the problems I noticed. 
+
+## Data Quantity
+Ideally, since there are 4 labels, there should be much more data to train on. I wanted to have a dataset with over 10000 rows, but I found that it was ultimately too time-consuming. As well, the dataset was slightly imbalanced with 2/3 having the most labels. Although I did correct some of it, it was still not perfect.
+
+## Narrowness
+There are too many topics on Twitter to capture. My dataset only captured a portion of the topics. Thus, if the classifier is exposed to topics it was not trained on, it would have worse performance. 
+
+## Data Quality
+During my trails, I noticed that some of the data was labelled incorrectly. Labelling hundreds of rows in a sitting, it is very common to auto-pilot and make mistakes. As well, some of the labels are subjective as well. I tried to keep a consistent outline of how to label but mistakes and human bias will happen.
+
+Despite this, I think that the project was successful in accomplishing what I set out to do and I was able to take a poor performing model of 0.44 accuracy and significantly increase it's accuracy to 0.59.
