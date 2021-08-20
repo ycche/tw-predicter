@@ -38,4 +38,24 @@ Lastly, I used the TFIDFVectorizer in order to tokenize the text.
 ## Training
 
 To start, I used a dataset with 1500 entries to test this out. I tried using 3 different classifiers: XGBClassifier, Support Vector Classifier, and Multinomial Naive Bayes.
-I took the average of 20 attempts using cross-validation with different train/test splits. 
+I took the average of 20 attempts using cross-validation with different train/test splits. The best accuracy was XGB at 0.44
+
+Trial 2: 
+This time, I used a dataset with 2000 entries. The best accuracy was XGB at 0.46
+
+Trial 3:
+The same dataset was used but I included to features about punctuation. Best accuracy XGB/0.48
+
+Trial 4:
+Dataset increased to 2200, Best accuracy SVC/0.5
+
+Trial 5 :
+By printing out the wrongly classified results, I realized that some of my labelling was wrong and incorrect. I fixed some of the major mistakes. 
+Best accuracy SVC/0.53
+
+Trial 6:
+The labels were imbalanced from the start. There were far more 2/3 than 1/4. I ended up finding specific 1/4 labels and inserting it into the dataset to make it more balanced. 
+Best accuracy SVC/0.56
+
+Trial 7:
+This time I tried using hyperparameter tuning with the 2 best classifiers XGB/SVC using GridSearchCV. The best results came out to 0.59 using SVC
